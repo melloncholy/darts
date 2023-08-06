@@ -18,6 +18,7 @@ public class SecurityConfig {
 
     private final DartsmanDetailsService dartsmanDetailsService;
 
+    private final String sanyLox = "";
     @Autowired
     public SecurityConfig(DartsmanDetailsService dartsmanDetailsService) {
         this.dartsmanDetailsService = dartsmanDetailsService;
