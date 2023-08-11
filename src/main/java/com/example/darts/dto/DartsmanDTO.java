@@ -1,47 +1,21 @@
-package com.example.darts.models;
+package com.example.darts.dto;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
-@Entity
-@Table(name = "dartsman")
-public class Dartsman {
+public class DartsmanDTO {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private int id;
     @NotEmpty(message = "Username can`t be empty")
     @Size(min = 3, max = 20, message = "Username must be from 3 to 20 symbols")
-    @Column(name = "username")
     private String username;
     @NotEmpty(message = "Password can`t be empty")
-    @Column(name = "password")
     private String password;
     @Email
-    @Column(name = "email")
     private String email;
-
-//    @OneToOne(mappedBy = "dartsman")
-//    private Image image;
-
-    public Dartsman() {
-    }
-
-    public Dartsman(String username, String password, String email) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getUsername() {
         return username;
@@ -67,11 +41,11 @@ public class Dartsman {
         this.email = email;
     }
 
-//    public Image getImage() {
-//        return image;
-//    }
-//
-//    public void setImage(Image image) {
-//        this.image = image;
-//    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
