@@ -2,9 +2,9 @@ package com.example.darts.models;
 
 import com.example.darts.enums.GameStatus;
 import com.example.darts.enums.GameType;
-import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
+
 
 import java.time.LocalDateTime;
 
